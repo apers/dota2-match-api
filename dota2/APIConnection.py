@@ -76,6 +76,6 @@ class APIConnection:
         req_url = self.match_detail_url+'&match_id='+str(matchID)
 
         # Get match data
-        #jsondata = self._getData(req_url)
-        jsondata = json.load(open('detail.json'))
+        jsondata = self._getData(req_url)
+        #jsondata = json.load(open('detail.json'))
         return jsondata['result']
